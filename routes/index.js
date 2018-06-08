@@ -1,30 +1,31 @@
 const express = require('express');
+const controller = require('../controllers/pagesController');
 
 const router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Home' });
+  controller.getHome(req, res, next);
 });
 
 /* GET about page. */
 router.get('/about', (req, res, next) => {
-  res.render('about', { title: 'About Me' });
+  controller.getAbout(req, res, next);
 });
 
 /* GET projects page. */
 router.get('/projects', (req, res, next) => {
-  res.render('projects', { title: 'My Projects' });
+  controller.getProjects(req, res, next);
 });
 
 /* GET services page. */
 router.get('/services', (req, res, next) => {
-  res.render('services', { title: 'Services' });
+  controller.getServices(req, res, next);
 });
 
 /* GET contact page. */
 router.get('/contact', (req, res, next) => {
-  res.render('contact', { title: 'Contact Me' });
+  controller.getContact(req, res, next);
 });
 
 module.exports = router;
