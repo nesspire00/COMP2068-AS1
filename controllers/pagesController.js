@@ -34,47 +34,44 @@ exports.getContact = (req, res, next) => {
 };
 
 /* Take in and send me a message from contact form */
-exports.sendMessage = (req, res, next) => {
-  console.log(req.body);
+exports.sendEmail = (req, res, next) => {
+  /* get data into variables */
+  const body = req.body;
+  const name = body.name;
+  const email = body.email;
+  const message = body.message;
 
-  const message = {
-    from: 'Mykyta Naumenko',
-    to: 'nesspire00@gmail.com',
-    subject: 'test2',
-    text: req.body.message,
+  const composedMessage = {
+    text:
+      'Someone has filled out the contact form!\n\n' +
+      `Name: ${name} \n` +
+      `Email Address: ${email} \n` +
+      `Message: ${message} \n\n`,
+    subject: 'Website form contact',
   };
 
-  const smtpConfig = {
-    host: 'xo5.x10hosting.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: 'adm@nesspire00.x10.mx',
-      pass: 'Qwerty9398896',
-    },
-  };
-
+  /* Create nodemailer SMTP transporter */
   const transporter = nodemailer.createTransport({
     host: 'xo5.x10hosting.com',
     port: 465,
-    secure: true,
     auth: {
       user: 'adm@nesspire00.x10.mx',
-      pass: 'Qwerty9398896',
+      pass: process.env.pass,
     },
   });
 
-  transporter.sendMail(message, (err) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('SUCCESS! 2');
-    }
-  });
-
-  res.redirect('/contact');
-};
-
-exports.contactFormSuccess = (req, res, next) => {
-  console.log('Success');
+  transporter.sendMail(
+    {
+      from: 'mykytanaumenko.me <adm@nesspire00.m10.mx>',
+      to: 'mykyta-naumenko@outlook.com',
+      subject: composedMessage.subject,
+      text: composedMessage.text,
+    },
+    (error) => {
+      if (error) {
+        return console.log(error);
+      }
+      res.redirect('/contact');
+    },
+  );
 };

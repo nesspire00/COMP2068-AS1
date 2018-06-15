@@ -42,7 +42,7 @@ router.get('/contact/success', (req, res, next) => {
 
 /* POST contact page. */
 router.post('/contact', (req, res, next) => {
-  controller.sendMessage(req, res, next);
+  controller.sendEmail(req, res, next);
 });
 
 module.exports = router;
