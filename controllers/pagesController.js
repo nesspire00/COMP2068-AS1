@@ -1,3 +1,11 @@
+/**
+ * File: pagesController.js
+ * Author: Mykyta Naumenko
+ * Website: www.mykytanaumenko.me
+ * Description: Controller file, responsible for displaying views
+ * and supplying them with information.
+ */
+
 const nodemailer = require('nodemailer');
 
 /* Display Home page */

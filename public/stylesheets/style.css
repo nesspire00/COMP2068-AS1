@@ -1,3 +1,11 @@
+/**
+ * File: style.css
+ * Author: Mykyta Naumenko
+ * Website: www.mykytanaumenko.me
+ * Description: Default css file for site-wide design parameters.
+ */
+
+/* index.ejs */
 body {
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
   background-color: black;
@@ -9,16 +17,94 @@ main.mdl-layout__content {
 
 a.homelink {
   color: white;
-  /* text-decoration-style: none !important; */
   text-decoration-line: none;
 }
 
+/* Background image credit: http://backgroundcheckall.com/wp-content/uploads/2017/12/web-development-background-8.jpg */
+body {
+  background-image: url(/images/home-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* contact.ejs */
 form {
   padding: 25px;
   background-color: white;
   color: black;
 }
 
+/* services.ejs */
 table {
   color: black;
+}
+
+/* About.ejs */
+.article {
+  padding: 10px;
+}
+
+/* index.ejs */
+.demo-card-wide.mdl-card {
+  width: auto;
+  height: 260px;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background-color: coral !important;
+}
+
+.card1 > .mdl-card__title {
+  background-color: cornflowerblue !important;
+}
+
+.card2 > .mdl-card__title {
+  background-color: crimson !important;
+}
+
+.card3 > .mdl-card__title {
+  background-color: darkolivegreen !important;
+}
+
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+/* header.ejs */
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  color: white;
+}
+
+/* projects.ejs */
+.demo-card-square.mdl-card {
+  height: 320px;
+}
+
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background: bottom right 15% no-repeat #46b6ac;
+  background-size: 100%;
+}
+
+.card1-proj > .mdl-card__title {
+  background: url('../images/mv-thumb.png') bottom right 15% no-repeat #46b6ac;
+  background-size: 116%;
+  color: black;
+  font-weight: bold;
+}
+
+.card2-proj > .mdl-card__title {
+  background: url('../images/mn-thumb.png') bottom right 15% no-repeat #46b6ac;
+  background-size: 116%;
+  font-weight: bold;
+}
+
+.card3-proj > .mdl-card__title {
+  background: url('../images/gh-thumb.png') bottom right 15% no-repeat #46b6ac;
+  background-size: 102%;
+  color: black;
+  font-weight: bold;
 }

@@ -1,3 +1,10 @@
+/**
+ * File: index.js
+ * Author: Mykyta Naumenko
+ * Website: www.mykytanaumenko.me
+ * Description: Routes file, linking paths to the controllers/pagesController.js file
+ */
+
 const express = require('express');
 const controller = require('../controllers/pagesController');
 

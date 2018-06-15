@@ -1,48 +1,24 @@
+<!--
+    File: index.ejs
+    Author: Mykyta Naumenko
+    Website: www.mykytanaumenko.me
+    Description: Home page of the website.
+-->
 <% include partials/header %>
 
   <h1>
     Hello!
   </h1>
   <p>
-    You have stumbled upon my personal portfolio page. Here you can find out what I am. Enjoy your stay!
+    You have stumbled upon my personal portfolio page made for COMP2068 Advanced Web Development class. Here you can find out
+    what I am. Enjoy your stay!
   </p>
 
-  <!-- Wide card with share menu button -->
-  <style>
-    .demo-card-wide.mdl-card {
-      width: auto;
-      height: 260px;
-    }
 
-    .demo-card-wide>.mdl-card__title {
-      color: #fff;
-      height: 176px;
-      background-color: coral !important;
-      background: url('../assets/demos/welcome_card.jpg') center / cover;
-    }
-
-    .card1>.mdl-card__title {
-      background-color: cornflowerblue !important;
-    }
-
-    .card2>.mdl-card__title {
-      background-color: crimson !important;
-    }
-
-    .card3>.mdl-card__title {
-      background-color: darkolivegreen !important;
-    }
-
-    .demo-card-wide>.mdl-card__menu {
-      color: #fff;
-    }
-  </style>
-
-
-
-
+  <!-- Home Cards -->
   <div class="mdl-grid">
 
+    <!-- Card 1 -->
     <div class="mdl-cell mdl-cell--4-col">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp card1">
         <div class="mdl-card__title">
@@ -52,13 +28,14 @@
           Curious to see what I have worked on? This list is just for you...
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/projects">
             View Projects
           </a>
         </div>
       </div>
-
     </div>
+
+    <!-- Card 2 -->
     <div class="mdl-cell mdl-cell--4-col">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp card2">
         <div class="mdl-card__title">
@@ -68,14 +45,14 @@
           If there is anything I can help you with, it would be in this list...
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/services">
             See Services
           </a>
         </div>
       </div>
-
     </div>
 
+    <!-- Card 3 -->
     <div class="mdl-cell mdl-cell--4-col">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp card3">
         <div class="mdl-card__title">
@@ -85,14 +62,12 @@
           If you need to get in touch with me, or just want to say hi - send me a message. I will respond!...
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/contact">
             Send me a message
           </a>
         </div>
       </div>
-
     </div>
-
 
   </div>
 

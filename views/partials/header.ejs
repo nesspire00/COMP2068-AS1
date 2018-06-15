@@ -1,3 +1,9 @@
+<!--
+    File: header.ejs
+    Author: Mykyta Naumenko
+    Website: www.mykytanaumenko.me
+    Description: A partial file to render the header with both desktop and mobile navbars.
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,30 +22,17 @@
 </head>
 
 <body>
-    <!-- Uses a transparent header that draws on top of the layout's background -->
-    <style>
-        .demo-layout-transparent {
-            background: url('../assets/demos/transparent.jpg') center / cover;
-        }
-
-        .demo-layout-transparent .mdl-layout__header,
-        .demo-layout-transparent .mdl-layout__drawer-button {
-            /* This background is dark, so we set text to white. Use 87% black instead if
-             your background is light. */
-            color: white;
-        }
-    </style>
 
     <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <!-- Desktop header -->
         <header class="mdl-layout__header mdl-layout__header--transparent">
             <div class="mdl-layout__header-row">
-                <!-- Title -->
+                <!-- Brand -->
                 <a href="/" class="homelink">
                     <span class="mdl-layout-title">Mykyta Naumenko</span>
                 </a>
-                <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
-                <!-- Navigation -->
+                <!-- Nav -->
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="/about">About Me</a>
                     <a class="mdl-navigation__link" href="/projects">My Projects</a>
@@ -48,8 +41,13 @@
                 </nav>
             </div>
         </header>
+        <!-- Mobile menu -->
         <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Mykyta Naumenko</span>
+            <!-- Brand -->
+            <span class="mdl-layout-title">
+                <a href="/">Mykyta Naumenko</a>
+            </span>
+            <!-- Nav -->
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="/about">About Me</a>
                 <a class="mdl-navigation__link" href="/projects">My Projects</a>
@@ -60,14 +58,3 @@
 
     </div>
     <main class="mdl-layout__content">
-        <!-- <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-        <header class="mdl-layout__header">
-            <nav class="">
-                <a href="/">Homepage</a>
-                <a href="/about">About Me</a>
-                <a href="/projects">My Projects</a>
-                <a href="/services">Services</a>
-                <a href="/contact">Contact Me</a>
-            </nav>
-        </header>
-    </div> -->
