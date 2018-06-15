@@ -7,6 +7,18 @@ main.mdl-layout__content {
   padding: 50px;
 }
 
-a {
-  color: #00b7ff;
+a.homelink {
+  color: white;
+  /* text-decoration-style: none !important; */
+  text-decoration-line: none;
+}
+
+form {
+  padding: 25px;
+  background-color: white;
+  color: black;
+}
+
+table {
+  color: black;
 }

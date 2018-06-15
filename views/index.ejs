@@ -1,8 +1,99 @@
 <% include partials/header %>
+
   <h1>
-    <%= title %>
+    Hello!
   </h1>
   <p>
-    This is the home page
+    You have stumbled upon my personal portfolio page. Here you can find out what I am. Enjoy your stay!
   </p>
+
+  <!-- Wide card with share menu button -->
+  <style>
+    .demo-card-wide.mdl-card {
+      width: auto;
+      height: 260px;
+    }
+
+    .demo-card-wide>.mdl-card__title {
+      color: #fff;
+      height: 176px;
+      background-color: coral !important;
+      background: url('../assets/demos/welcome_card.jpg') center / cover;
+    }
+
+    .card1>.mdl-card__title {
+      background-color: cornflowerblue !important;
+    }
+
+    .card2>.mdl-card__title {
+      background-color: crimson !important;
+    }
+
+    .card3>.mdl-card__title {
+      background-color: darkolivegreen !important;
+    }
+
+    .demo-card-wide>.mdl-card__menu {
+      color: #fff;
+    }
+  </style>
+
+
+
+
+  <div class="mdl-grid">
+
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp card1">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">What I've done</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          Curious to see what I have worked on? This list is just for you...
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            View Projects
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp card2">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">What I'm doing</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          If there is anything I can help you with, it would be in this list...
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            See Services
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp card3">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">What's on your mind</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          If you need to get in touch with me, or just want to say hi - send me a message. I will respond!...
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Send me a message
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
   <% include partials/footer %>

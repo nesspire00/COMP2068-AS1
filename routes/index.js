@@ -28,4 +28,14 @@ router.get('/contact', (req, res, next) => {
   controller.getContact(req, res, next);
 });
 
+/* GET contact page. */
+router.get('/contact/success', (req, res, next) => {
+  controller.contactFormSuccess(req, res, next);
+});
+
+/* POST contact page. */
+router.post('/contact', (req, res, next) => {
+  controller.sendMessage(req, res, next);
+});
+
 module.exports = router;
