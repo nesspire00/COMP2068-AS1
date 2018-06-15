@@ -1,8 +1,12 @@
 body {
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+main.mdl-layout__content {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
